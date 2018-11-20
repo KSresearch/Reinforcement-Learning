@@ -53,6 +53,7 @@ def replay():
         next_state, reward, done, _ = env.step(action)
         next_state = np.reshape(next_state,[1,state_size])
         total_reward += reward
+        state = next_state
         if done:
             print('Final reward is: %d'%(total_reward))
             break
